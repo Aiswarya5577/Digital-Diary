@@ -1,0 +1,477 @@
+:root {
+    /* Blue Theme (Default) */
+    --primary-gradient: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+    --secondary-gradient: linear-gradient(135deg, #0061ff 0%, #60efff 100%);
+    --hover-gradient: linear-gradient(45deg, #00c6fb 0%, #005bea 100%);
+    
+    /* Common Colors */
+    --success-color: #00C851;
+    --error-color: #ff4444;
+    --warning-color: #ffbb33;
+    
+    /* Shadows */
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Enhanced Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background, #f0f2f5);
+    color: var(--text-color, #333);
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+/* Enhanced Navbar */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+}
+
+.navbar {
+    background: var(--primary-gradient);
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--card-shadow);
+    animation: slideIn 0.5s ease-out;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    white-space: nowrap;
+}
+
+.signup-btn {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid white !important;
+}
+
+.nav-links li a:hover {
+    background: var(--hover-gradient);
+    transform: translateY(-3px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Enhanced Container Styles */
+.container {
+    max-width: 800px;
+    margin: 100px auto 20px;
+    background: var(--container-bg, rgba(255, 255, 255, 0.95));
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    animation: float 6s ease-in-out infinite;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, textarea, select {
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background: var(--input-bg, rgba(255, 255, 255, 0.9));
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow);
+    outline: none;
+}
+
+/* Enhanced Button Styles */
+button {
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+}
+
+button:hover {
+    background: var(--hover-gradient);
+    transform: translateY(-3px);
+    box-shadow: var(--hover-shadow);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+/* Enhanced Entry Cards */
+.entry {
+    background: var(--entry-bg, #ffffff);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.entry:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: var(--hover-shadow);
+}
+
+.entry::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-gradient);
+    border-radius: 4px 0 0 4px;
+}
+
+/* Theme-specific styles */
+.theme-dark {
+    --background: #1a1a1a;
+    --text-color: #ffffff;
+    --container-bg: #2d2d2d;
+    --input-bg: #3d3d3d;
+    --entry-bg: #363636;
+    --primary-gradient: linear-gradient(45deg, #434343 0%, #000000 100%);
+    --hover-gradient: linear-gradient(45deg, #333333 0%, #111111 100%);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --hover-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.theme-blue {
+    --background: #f0f2f5;
+    --text-color: #333333;
+    --container-bg: #ffffff;
+    --input-bg: #ffffff;
+    --entry-bg: #ffffff;
+    --primary-gradient: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+    --hover-gradient: linear-gradient(45deg, #00c6fb 0%, #005bea 100%);
+}
+
+.theme-pastel {
+    --background: #ffeaf4;
+    --text-color: #5a5a5a;
+    --container-bg: #ffffff;
+    --input-bg: #ffffff;
+    --entry-bg: #ffffff;
+    --primary-gradient: linear-gradient(45deg, #ffafbd 0%, #ffc3a0 100%);
+    --hover-gradient: linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 80px 20px 20px;
+        padding: 20px;
+    }
+    
+    .nav-container {
+        padding: 0 10px;
+        height: auto;
+    }
+    
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    
+    .nav-links {
+        gap: 0.5rem;
+    }
+    
+    .nav-links li a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Success Message */
+.success-message {
+    background: var(--success-color);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Error Message */
+.error-message {
+    background: var(--error-color);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Add dark theme specific styles */
+.theme-dark .container {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select {
+    background: #3d3d3d;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.theme-dark .entry {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .nav-links li a {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.theme-dark .nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Add smooth scrolling to body */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add styles for active nav link */
+.nav-links li a.active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Add hover effect for navbar brand */
+.navbar-brand:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Add these new styles for logged-in user elements */
+.user-profile {
+    background: rgba(255, 255, 255, 0.15) !important;
+    cursor: default;
+}
+
+.logout-link {
+    background: rgba(255, 0, 0, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.logout-link:hover {
+    background: rgba(255, 0, 0, 0.2) !important;
+}
+
+/* Active nav link */
+.nav-links li a.active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme-specific styles for logged-in elements */
+.theme-dark .user-profile {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.theme-dark .logout-link {
+    background: rgba(255, 0, 0, 0.15) !important;
+}
+
+.theme-dark .logout-link:hover {
+    background: rgba(255, 0, 0, 0.25) !important;
+}
+
+/* Entry Header Styles */
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.entry-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Delete Button Styles */
+.delete-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 0, 0, 0.1);
+    box-shadow: none;
+}
+
+.delete-btn:hover {
+    background-color: var(--error-color);
+    transform: scale(1.1);
+}
+
+.delete-icon {
+    font-size: 20px;
+    color: var(--error-color);
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover .delete-icon {
+    color: white;
+}
+
+/* Theme-specific styles for delete button */
+.theme-dark .delete-btn {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.theme-dark .delete-icon {
+    color: #ff6b6b;
+}
+
+/* Confirmation Dialog Styles */
+.confirm-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Add hover effect for entries */
+.entry:hover .delete-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.entry .delete-btn {
+    opacity: 0.5;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+} 

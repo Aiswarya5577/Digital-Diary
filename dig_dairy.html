@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Diary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="navbar-brand">Digital Diary</a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                <li><a href="#" onclick="showSection('signup')" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="themeContainer">
+        <h2>Personalize Your Theme</h2>
+        <label for="theme">Choose Theme:</label>
+        <select id="theme" onchange="changeTheme()">
+            <option value="blue">Blue</option>
+            <option value="dark">Dark</option>
+            <option value="pastel">Pastel</option>
+        </select>
+    </div>
+
+    <div class="container" id="loginContainer">
+        <h2>Welcome Back!</h2>
+        <form id="loginForm" onsubmit="login(event)">
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+            <p>New user? <a href="#" onclick="register(event)">Create an account</a></p>
+        </form>
+    </div>
+    
+    <div class="container" id="diaryContainer" style="display: none;">
+        <h2>My Digital Diary</h2>
+        <form id="entryForm" onsubmit="saveEntry(event)">
+            <input type="file" id="mediaUpload" accept="image/*,video/*">
+            <textarea id="entryText" placeholder="Write your thoughts..." required></textarea>
+            <input type="date" id="entryDate">
+            <button type="submit">Save Entry</button>
+
+            
+        </form>
+        <h3>Past Entries</h3>
+        <div id="entries"></div>
+        <h3 id="reminder"></h3>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
