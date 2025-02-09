@@ -11,7 +11,7 @@
   
 
 ### Hosted Project LinkProject Description:
-[mention your project hosted project link here]
+[Digital Diary](https://digital-diary-73qw.vercel.app/)
 
 ### Project Description
 The Digital Diary is a modern journaling application designed to help users securely record their daily thoughts, events, and memories. It offers features like password protection, cloud backup, multimedia support (photos, voice notes, and doodles), and an intuitive search function.
@@ -29,27 +29,23 @@ For Software:
 - Tools used:VS code,Git
 
 ### Project Documentation
-For Software: 
-date:february 8,2025
-project name:digital diary
+Digital Diary is a simple, client-side web application that allows users to create, view, and reminisce about their diary entries. The application provides a personalized experience with theme customization, user account management, and multimedia support.Users can create an account and log in using a username and password.Users can write diary entries, select a date, and optionally attach media files.All saved entries are displayed in a list, along with the date and any media.
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![image1](https://github.com/user-attachments/assets/07cebc9b-bbb0-4de5-af90-f17618b0f8fe)
+login page of the digital diary
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![image2](https://github.com/user-attachments/assets/b6902a32-f6d1-4301-b847-798fb95dfbe4)
+home page of the digital diary
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![image3](https://github.com/user-attachments/assets/7e8e3926-a16c-4e1b-bcdf-aad24e6dd42d)
+a diary entry
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+(https://drive.google.com/file/d/1xzUaCkJw_J8zuy9U3h-b-rBex93feRrP/view?usp=drive_link)
+Basic tutorial about how to login and basic features of the website.
 
-# Additional Demos
-[Add any extra demo materials/links]
  
 ## Team Contributions
 - Aiswarya K : home page
