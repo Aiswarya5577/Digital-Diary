@@ -49,7 +49,7 @@ Basic tutorial about how to login and basic features of the website.
  
 ## Team Contributions
 - Aiswarya K : home page
-- Amrutha.C  : Login page
+- [Amrutha.C](https://github.com/)  : Login page
 
 ---
 Made with ❤️ at TinkerHub
